@@ -1,0 +1,29 @@
+@startuml TutorialYouTube
+   class Aluno #Orange{
+    +String Nome
+    +String Endereco
+    +Integer Matricula
+    
+    +Integer obterMatriculas()
+   }     
+   class Professor #SeaGreen{
+    +String Nome
+    +String Titulo
+    +String Registro
+    +String obterRegistro()    
+   } 
+   class Turma #MediumPurple{
+    +String Codigo
+    +String Sala
+    +String Horario
+    +String NomeDisciplina
+    +String RegistroProfessor
+    +List Alunos
+    +List exibirAlunos()
+    +Dict exibirDadosTurma()
+   }
+
+   
+   Aluno --> Turma : pertence à
+   Professor --> Turma : pertence à
+@enduml
